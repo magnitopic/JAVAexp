@@ -8,7 +8,7 @@ public class SecretNumberGame {
 		byte number=(byte)(Math.random()*99+1);
 		
 		do ;
-		while (question(number)!=number);	
+		while (question(number)!=number);
 	}
 
 	public static double question(byte number){
