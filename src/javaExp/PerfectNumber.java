@@ -3,7 +3,7 @@ package javaExp;
 public class PerfectNumber {
 	public static void main(String[] args) {
 		// 6 is true because it's divisors are 1,2,3 an their sum is 6
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i <= 50; i++) {
 			System.out.println("Is " + i + " a perfect number? " + isPerfectNumber(i));
 		}
 	}
