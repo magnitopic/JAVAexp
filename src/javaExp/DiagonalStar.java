@@ -9,7 +9,7 @@ public class DiagonalStar {
 		if (number < 5) {
 			System.out.print("Invalid Value");
 		} else {
-			// number or rows
+			// number of rows
 			for (int i = 0; i < number; i++) {
 				// number of columns
 				for (int j = 0; j < number; j++) {
