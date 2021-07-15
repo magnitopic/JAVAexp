@@ -34,12 +34,11 @@ public class Objects {
 		System.out.println("_________________");
 
 		// class BankAccount
-		BankAccount bank = new BankAccount();
-		bank.setCustomerName("Jack");
-		bank.addValance(10000);
-		bank.deductValance(5673);
-		bank.addValance(435);
-		System.out.println("The bank account of " + bank.getCustomerName() + " with count Nº " + bank.getNumber() + " has a valance of " + bank.getValance() + "€");
+		BankAccount bank = new BankAccount("Jack", "myemail@jack.com", "58546845", 12345, 10000);
+		bank.deductBalance(5673);
+		bank.addBalance(435);
+		System.out.println("The bank account of " + bank.getCustomerName() + " with count Nº " + bank.getNumber()
+				+ " has a balance of " + bank.getBalance() + "€");
 		System.out.println("_________________");
 	}
 }

@@ -2,17 +2,33 @@ package javaExp;
 
 public class BankAccount {
 	private int number;
-	private int valance;
+	private int balance;
 	private String customerName;
 	private String email;
 	private String phoneNumber;
+
+	public BankAccount(String customerName,String email,String phoneNumber,int number,int balance){
+		
+	}
+
+	public void addBalance(int balance) {
+		this.balance += balance;
+	}
+
+	public void deductBalance(int balance) {
+		if (this.balance - balance >= 0) {
+			this.balance -= balance;
+		} else {
+			System.out.println("Balance deduct too high. Rejected.");
+		}
+	}
 
 	public int getNumber() {
 		return this.number;
 	}
 
-	public int getValance() {
-		return this.valance;
+	public int getBalance() {
+		return this.balance;
 	}
 
 	public String getCustomerName() {
@@ -31,8 +47,8 @@ public class BankAccount {
 		this.number = number;
 	}
 
-	public void setValance(int valance) {
-		this.valance = valance;
+	public void setBalance(int balance) {
+		this.balance = balance;
 	}
 
 	public void setCustomerName(String customerName) {
@@ -45,13 +61,5 @@ public class BankAccount {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-	}
-
-	public void addValance(int valance) {
-		this.valance = this.valance + valance;
-	}
-
-	public void deductValance(int valance) {
-		this.valance = this.valance - valance;
 	}
 }
