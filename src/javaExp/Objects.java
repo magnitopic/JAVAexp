@@ -21,5 +21,17 @@ public class Objects {
 		System.out.println(first.getMultiplicationResult());
 		System.out.println(first.getDivisionResult());
 		System.out.println("_________________");
+		// Class Person
+		Person person=new Person();
+
+		person.setAge(13);
+		person.setFirstName("Amela");
+		System.out.println(person.getFirstName());
+		person.setLastName("Nazarenus");
+		System.out.println(person.getLastName());
+		System.out.print(person.getFullName());
+		System.out.println(" "+person.getAge());
+		System.out.println("Is a teen?: "+person.isTeen());
+		System.out.println("_________________");
 	}
 }
