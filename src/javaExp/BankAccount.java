@@ -7,8 +7,12 @@ public class BankAccount {
 	private String email;
 	private String phoneNumber;
 
-	public BankAccount(String customerName,String email,String phoneNumber,int number,int balance){
-		
+	public BankAccount(String customerName, String email, String phoneNumber, int number, int balance) {
+		this.number = number;
+		this.balance = balance;
+		this.customerName = customerName;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
 	}
 
 	public void addBalance(int balance) {
