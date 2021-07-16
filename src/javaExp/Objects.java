@@ -40,5 +40,29 @@ public class Objects {
 		System.out.println("The bank account of " + bank.getCustomerName() + " with count Nº " + bank.getNumber()
 				+ " has a balance of " + bank.getBalance() + "€");
 		System.out.println("_________________");
+
+		// class VipCustomer
+		VipCustomer customer1 = new VipCustomer();
+		System.out.println(customer1.getCreditLimit());
+		System.out.println(customer1.getEmail());
+		System.out.println(customer1.getName());
+		System.out.println("");
+		VipCustomer customer2 = new VipCustomer("Jeff", 2333.25);
+		System.out.println(customer2.getCreditLimit());
+		System.out.println(customer2.getEmail());
+		System.out.println(customer2.getName());
+		System.out.println("");
+		VipCustomer customer3 = new VipCustomer("Jeff", 2333.25, "jeff@email.com");
+		System.out.println(customer3.getCreditLimit());
+		System.out.println(customer3.getEmail());
+		System.out.println(customer3.getName());
+		System.out.println("_________________");
+
+		// wall area
+		WallArea wall = new WallArea(200, 567.4);
+		System.out.println(wall.getArea());
+		System.out.println("_________________");
+
+		
 	}
 }
