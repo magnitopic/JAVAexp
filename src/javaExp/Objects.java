@@ -69,5 +69,12 @@ public class Objects {
 		System.out.println(firstPoint.distance());
 		System.out.println(firstPoint.distance(43, 65));
 		System.out.println(firstPoint.distance(secondPoint));
+		System.out.println("_________________");
+
+		// Calculator / Carpet / Floor
+		Floor floor = new Floor(20.5, 2.3);
+		Carpet carpet = new Carpet(8); // 8€ it costs per m2 of carpet
+		Calculator calculator = new Calculator(floor, carpet);
+		System.out.println(calculator.getTotalCost());
 	}
 }
