@@ -76,5 +76,21 @@ public class Objects {
 		Carpet carpet = new Carpet(8); // 8€ it costs per m2 of carpet
 		Calculator calculator = new Calculator(floor, carpet);
 		System.out.println(calculator.getTotalCost());
+		System.out.println("_________________");
+
+		// ComplexNumber
+		ComplexNumber num1=new ComplexNumber(1, 1);
+		ComplexNumber num2=new ComplexNumber(2.5, -1.5);
+		num1.add(1,1);
+		System.out.println("num1 real= "+num1.getReal());
+		System.out.println("num1 imaginary= "+num1.getImaginary());
+		num1.subtract(num2);
+		System.out.println("num1 real= "+num1.getReal());
+		System.out.println("num1 imaginary= "+num1.getImaginary());
+		num2.subtract(num1);
+		System.out.println("num2 real= "+num2.getReal());
+		System.out.println("num2 imaginary= "+num2.getImaginary());
+		System.out.println("_________________");
+
 	}
 }
