@@ -89,7 +89,14 @@ public class Objects {
 		golf.accelerate(30);
 		golf.accelerate(20);
 		golf.accelerate(-42);
-		System.out.println("velocity = "+golf.getCurrentVelocity()+" direction = " + golf.getCurrentDirection());
+		System.out.println("velocity = " + golf.getCurrentVelocity() + " direction = " + golf.getCurrentDirection());
+		System.out.println("_________________");
 
+		// Circle Cylinder
+		Cylinder cylinder = new Cylinder(20, 10);
+		System.out.println(cylinder.getHeight() + " is the height of the cylinder");
+		System.out.println(cylinder.getRadius() + " is the radius of the cylinder");
+		System.out.println(cylinder.getVolume() + " is the volume of the cylinder");
+		System.out.println("_________________");
 	}
 }
