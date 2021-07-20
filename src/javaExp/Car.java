@@ -2,16 +2,28 @@ package javaExp;
 
 //Creating the usual car object in Java
 
-public class Car {
-	public int doors;
-	public int wheels;
-	public String model;
+public class Car extends Vehicle {
+	private int wheels;
+	private int doors;
+	private int gears;
+	private boolean isManual;
+	private int currentGear;
 
-	public void setModel(String model) {
-		this.model = model;
+	public Car(String name, String size, int wheels, int doors, int gears, boolean isManual) {
+		super(name, size);
+		this.wheels = wheels;
+		this.doors = doors;
+		this.gears = gears;
+		this.isManual = isManual;
+		this.currentGear = 1;
 	}
 
-	public String getModel() {
-		return this.model;
+	public void changeGear(int currentGear) {
+		this.currentGear = currentGear;
 	}
+
+	public void changeVelocity(int speed, int direction) {
+		move(speed, direction);
+	}
+
 }

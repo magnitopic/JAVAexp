@@ -2,15 +2,6 @@ package javaExp;
 
 public class Objects {
 	public static void main(String[] args) {
-		// Car
-		Car volkswagen = new Car();
-		Car ford = new Car();
-		volkswagen.setModel("Golf");
-		ford.setModel("Fiesta");
-		System.out.println("The model of the car is: " + volkswagen.getModel());
-		System.out.println("The model of the car is: " + ford.getModel());
-		System.out.println("_________________");
-
 		// SimpleCalculator
 		SimpleCalculator first = new SimpleCalculator();
 		first.setFirstNumber(20);
@@ -79,18 +70,26 @@ public class Objects {
 		System.out.println("_________________");
 
 		// ComplexNumber
-		ComplexNumber num1=new ComplexNumber(1, 1);
-		ComplexNumber num2=new ComplexNumber(2.5, -1.5);
-		num1.add(1,1);
-		System.out.println("num1 real= "+num1.getReal());
-		System.out.println("num1 imaginary= "+num1.getImaginary());
+		ComplexNumber num1 = new ComplexNumber(1, 1);
+		ComplexNumber num2 = new ComplexNumber(2.5, -1.5);
+		num1.add(1, 1);
+		System.out.println("num1 real= " + num1.getReal());
+		System.out.println("num1 imaginary= " + num1.getImaginary());
 		num1.subtract(num2);
-		System.out.println("num1 real= "+num1.getReal());
-		System.out.println("num1 imaginary= "+num1.getImaginary());
+		System.out.println("num1 real= " + num1.getReal());
+		System.out.println("num1 imaginary= " + num1.getImaginary());
 		num2.subtract(num1);
-		System.out.println("num2 real= "+num2.getReal());
-		System.out.println("num2 imaginary= "+num2.getImaginary());
+		System.out.println("num2 real= " + num2.getReal());
+		System.out.println("num2 imaginary= " + num2.getImaginary());
 		System.out.println("_________________");
+
+		// Vehicle Car Golf
+		Golf golf = new Golf(36);
+		golf.steer(45);
+		golf.accelerate(30);
+		golf.accelerate(20);
+		golf.accelerate(-42);
+		System.out.println("velocity = "+golf.getCurrentVelocity()+" direction = " + golf.getCurrentDirection());
 
 	}
 }
