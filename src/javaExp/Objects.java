@@ -98,5 +98,15 @@ public class Objects {
 		System.out.println(cylinder.getRadius() + " is the radius of the cylinder");
 		System.out.println(cylinder.getVolume() + " is the volume of the cylinder");
 		System.out.println("_________________");
+
+		// Rectangle Cuboid
+		Cuboid cuboid = new Cuboid(20, 5, 10);
+		System.out.println("Lenght = " + cuboid.getLength());
+		System.out.println("Width = " + cuboid.getWidth());
+		System.out.println("Volume = " + cuboid.getVolume());
+		System.out.println("Heigth = " + cuboid.getHeight());
+		System.out.println("Area = " + cuboid.getArea());
+		System.out.println("_________________");
+
 	}
 }
