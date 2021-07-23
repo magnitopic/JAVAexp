@@ -119,5 +119,14 @@ public class Objects {
 		Bedroom bedroom = new Bedroom("My beadroom", wall1, wall2, wall3, wall4, ceiling, bed, lamp);
 		bedroom.makeBed();
 		System.out.println("_________________");
+
+		// Printer
+		Printer printer = new Printer(50, true);
+		printer.addToner(50);
+		System.out.println(printer.printPages(34));
+		printer.printPages(184);
+		System.out.println("Pages printed total = " + printer.getPagesPrinted());
+		System.out.println("_________________");
+
 	}
 }
