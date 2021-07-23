@@ -31,5 +31,13 @@ public class Golf extends Car {
 			changeVelocity(newVelocity, getCurrentDirection());
 		}
 	}
+
+	public int getRoadServiceMonths() {
+		return this.roadServiceMonths;
+	}
+
+	public void setRoadServiceMonths(int roadServiceMonths) {
+		this.roadServiceMonths = roadServiceMonths;
+	}
 	
 }

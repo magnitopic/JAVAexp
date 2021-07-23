@@ -28,4 +28,64 @@ public class Bedroom {
 	public void makeBed() {
 		bed.make();
 	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Wall getWall1() {
+		return this.wall1;
+	}
+
+	public void setWall1(Wall wall1) {
+		this.wall1 = wall1;
+	}
+
+	public Wall getWall2() {
+		return this.wall2;
+	}
+
+	public void setWall2(Wall wall2) {
+		this.wall2 = wall2;
+	}
+
+	public Wall getWall3() {
+		return this.wall3;
+	}
+
+	public void setWall3(Wall wall3) {
+		this.wall3 = wall3;
+	}
+
+	public Wall getWall4() {
+		return this.wall4;
+	}
+
+	public void setWall4(Wall wall4) {
+		this.wall4 = wall4;
+	}
+
+	public Ceiling getCeiling() {
+		return this.ceiling;
+	}
+
+	public void setCeiling(Ceiling ceiling) {
+		this.ceiling = ceiling;
+	}
+
+	public Bed getBed() {
+		return this.bed;
+	}
+
+	public void setBed(Bed bed) {
+		this.bed = bed;
+	}
+	public void setLamp(Lamp lamp) {
+		this.lamp = lamp;
+	}
+
 }
