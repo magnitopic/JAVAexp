@@ -128,5 +128,22 @@ public class Objects {
 		System.out.println("Pages printed total = " + printer.getPagesPrinted());
 		System.out.println("_________________");
 
+		// Car2 Ford Holden Mitsubishi
+		Ford ford = new Ford(6, "Ford F150Lightning");
+		System.out.println(ford.getName());
+		System.out.println(ford.startEngine());
+		System.out.println(ford.accelerate());
+		System.out.println(ford.brake());
+		Mitsubishi mitsubishi = new Mitsubishi(6, "ASX");
+		System.out.println(mitsubishi.getName());
+		System.out.println(mitsubishi.startEngine());
+		System.out.println(mitsubishi.accelerate());
+		System.out.println(mitsubishi.brake());
+		Holden holden = new Holden(4, "Volt");
+		System.out.println(holden.getName());
+		System.out.println(holden.startEngine());
+		System.out.println(holden.accelerate());
+		System.out.println(holden.brake());
+
 	}
 }
