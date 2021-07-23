@@ -9,11 +9,11 @@ public class RockPaperScissors {
 	private int userPoints;
 	private int machinePoints;
 
-	public void generateMachineChoice() {
+	private void generateMachineChoice() {
 		machineChoice = (int) (Math.random() * 3) + 1;
 	}
 
-	public int readUserChoice(String userChoice) {
+	private int readUserChoice(String userChoice) {
 		if (userChoice.equals("rock")) {
 			return 1;
 		} else if (userChoice.equals("paper")) {
@@ -25,9 +25,9 @@ public class RockPaperScissors {
 		}
 	}
 
-	public void determineWiner() {
+	private void determineWiner() {
 		if (this.userChoiceNumber == this.machineChoice) {
-			System.out.println("Ther was a tie.");
+			System.out.println("Ther was a tie. You both used " + userChoice);
 		} else if ((userChoiceNumber == 1 && machineChoice == 3) || (userChoiceNumber == 2 && machineChoice == 1)
 				|| (userChoiceNumber == 3 && machineChoice == 2)) {
 			System.out.println("You win!! Using " + userChoice);
@@ -38,7 +38,7 @@ public class RockPaperScissors {
 		}
 	}
 
-	public void head(Scanner input) {
+	private void getUserChoice(Scanner input) {
 		while (true) {
 			System.out.print("Rock, paper or scisors: ");
 			userChoice = input.nextLine().toLowerCase();
@@ -49,12 +49,9 @@ public class RockPaperScissors {
 				break;
 			}
 		}
-		generateMachineChoice();
-		determineWiner();
 	}
 
-	public static void main(String[] args) {
-		RockPaperScissors rps = new RockPaperScissors();
+	public void playGame() {
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
 			System.out.print("Who may points are we playing to?(min 1): ");
@@ -64,13 +61,13 @@ public class RockPaperScissors {
 				scanner.nextLine();
 				if (repetitions <= 0) {
 					System.out.println("Input not valid.");
-					// scanner.close();
 				} else {
-					// scanner.close();
-					while (rps.machinePoints < repetitions && rps.userPoints < repetitions) {
-						rps.head(scanner);
-						System.out.println("You have " + rps.userPoints + " points and the machine has "
-								+ rps.machinePoints + " points.");
+					while (this.machinePoints < repetitions && this.userPoints < repetitions) {
+						getUserChoice(scanner);
+						generateMachineChoice();
+						determineWiner();
+						System.out.println("You have " + this.userPoints + " points and the machine has "
+								+ this.machinePoints + " points.");
 					}
 					break;
 				}
@@ -78,5 +75,10 @@ public class RockPaperScissors {
 		}
 		scanner.close();
 		System.out.println("Game Over... Insert coin.");
+	}
+
+	public static void main(String[] args) {
+		RockPaperScissors game1 = new RockPaperScissors();
+		game1.playGame();
 	}
 }
