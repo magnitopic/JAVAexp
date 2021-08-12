@@ -72,4 +72,16 @@ public class Player implements ISaveable {
 		return "Player{name='" + this.name + "', hitPoints=" + this.hitPoints + ", strength=" + this.strength
 				+ ", weapon='" + this.weapon + "'}";
 	}
+
+	public static void main(String[] args) {
+		Player player=new Player("Mag", 200, 30);
+		System.out.println(player.toString());
+		List<String> atributes=new ArrayList<>();
+		atributes.add("Magnitopic");
+		atributes.add("300");
+		atributes.add("47");
+		atributes.add("Bow");
+		player.read(atributes);
+		System.out.println(player.toString());
+	}
 }
