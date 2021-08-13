@@ -15,11 +15,7 @@ public class Album {
 	}
 
 	public boolean addSong(String title, double duration) {
-		if (this.songs.findSong(title) == null) {
-			Song song = new Song(title, duration);
-			return this.songs.add(song);
-		}
-		return false;
+		return this.songs.add(new Song(title, duration));
 	}
 
 	public boolean addToPlayList(int songNum, LinkedList<Song> playlist) {
@@ -54,29 +50,20 @@ public class Album {
 		}
 
 		private Song findSong(String title) {
-		    System.out.println(this.songs.size());
-		    if(this.songs.size()!=0){
-		        System.out.println("Title: "+title);
-		       for (int i = 0; i < this.songs.size(); i++) {
-		           System.out.println(i+": "+this.songs.get(i));
+			System.out.println(this.songs.size());
+			for (int i = 0; i < this.songs.size(); i++) {
 				if (this.songs.get(i).getTitle().equals(title)) {
-				    System.out.println("Return is "+this.songs.get(i));
-		            System.out.println("____________");
 					return this.songs.get(i);
-				    }
-			    } 
-		    }
-		    System.out.println("Return is Null");
-		    System.out.println("____________");
+				}
+			}
 			return null;
 		}
 
 		private Song findSong(int number) {
-			if (songs.get(number) != null) {
-				return this.songs.get(number);
+			if (number-1>0 && number-1<songs.size()) {
+				return this.songs.get(number-1);
 			}
 			return null;
 		}
 	}
 }
-
