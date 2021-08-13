@@ -54,11 +54,20 @@ public class Album {
 		}
 
 		private Song findSong(String title) {
-			for (int i = 0; i <= this.songs.size(); i++) {
+		    System.out.println(this.songs.size());
+		    if(this.songs.size()!=0){
+		        System.out.println("Title: "+title);
+		       for (int i = 0; i < this.songs.size(); i++) {
+		           System.out.println(i+": "+this.songs.get(i));
 				if (this.songs.get(i).getTitle().equals(title)) {
+				    System.out.println("Return is "+this.songs.get(i));
+		            System.out.println("____________");
 					return this.songs.get(i);
-				}
-			}
+				    }
+			    } 
+		    }
+		    System.out.println("Return is Null");
+		    System.out.println("____________");
 			return null;
 		}
 
@@ -70,3 +79,4 @@ public class Album {
 		}
 	}
 }
+
