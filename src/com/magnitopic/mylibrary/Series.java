@@ -1,4 +1,4 @@
-package packages.Series;
+package com.magnitopic.mylibrary;
 
 /**
  * Series
@@ -21,8 +21,8 @@ public class Series {
 		return factorial;
 	}
 
-	public static int fibonacci(int n) {
-		int fibonacci=0;
+	public static long fibonacci(int n) {
+		long fibonacci=0;
 		for(int i=0; i<=n;i++){
 			fibonacci=+(n-i);
 		}
